@@ -28,7 +28,7 @@ module.exports = function (grunt) {
  
         concat: {  //описываем работу плагина конкатенации
             dist: {
-                src: ['dev/js/main.js'],  // какие файлы конкатенировать
+                src: ['dev/js/main.js', 'dev/js/script.js'],  // какие файлы конкатенировать
                 dest: 'assets/js/build.js'  // куда класть файл, который получиться после процесса конкатенации 
             }
         },
@@ -44,7 +44,14 @@ module.exports = function (grunt) {
                 dest: 'assets/js/build.min.js' // куда класть файл, который получиться после процесса минификации
             }
         },
- 
+
+        sass: {
+            dist: {
+              files: {
+                'dev/css/style.css': 'dev/css/style.sass'
+              }
+            }
+          },
         cssmin: { //описываем работу плагина минификации и конкатенации css.
             with_banner: {
                 options: {
@@ -60,11 +67,11 @@ module.exports = function (grunt) {
         watch: { //описываем работу плагина слежки за файлами.
             scripts: {
                 files: ['dev/js/*.js'],  //следить за всеми js файлами в папке dev
-                tasks: ['jshint', 'concat', 'uglify', 'removelogging']  //при их изменении запускать следующие задачи
+                tasks: ['jshint', 'sass', 'concat', 'uglify', 'removelogging']  //при их изменении запускать следующие задачи
             },
             css: {
-                files: ['dev/css/*.css'], //следить за всеми css файлами в папке dev
-                tasks: ['cssmin'] //при их изменении запускать следующую задачу
+                files: ['dev/css/*.css', 'dev/css/*.sass'], //следить за всеми css файлами в папке dev
+                tasks: ['sass', 'cssmin'] //при их изменении запускать следующую задачу
             }
         },
  
@@ -81,6 +88,7 @@ module.exports = function (grunt) {
  
     //подгружаем
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -88,5 +96,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-remove-logging');
  
 
-    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin', 'removelogging', 'watch']);
+    grunt.registerTask('default', ['jshint', 'sass', 'concat', 'uglify', 'cssmin', 'removelogging', 'watch']);
 };
