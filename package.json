@@ -6,7 +6,6 @@
     "grunt-contrib-concat": "latest",
     "grunt-contrib-cssmin": "latest",
     "grunt-contrib-jshint": "latest",
-    "grunt-contrib-sass": "^0.8.1",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-remove-logging": "latest"

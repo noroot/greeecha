@@ -1,0 +1,152 @@
+    @media only screen and (min-width : 1400px) {
+          .course__item.course__item--rub {
+            font-size: 185px;
+          margin-bottom: 105px;
+          }
+          .course__item {
+              font-size: 150px;
+              margin-bottom: 90px;
+          }
+          .course {
+           height: 600px;
+           margin: -280px auto 0;
+          }
+          .course__container {
+            width: 1400px;
+            margin: 0 auto;
+          }
+    }
+   /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+          .course__item.course__item--rub {
+            font-size: 150px;
+          }
+          .course__item {
+              font-size: 100px;
+              margin-bottom: 40px;
+          }
+          .course {
+            margin: -210px auto 0;
+          }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+            .course__item {
+              font-size: 90px;
+          }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+    .course__item {
+      font-size: 70px;
+      }
+      .course__item span {
+display: block;
+font-size: 17px;
+}
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+           .course__item {
+            font-size: 50px;
+            width: 100%;
+            margin-bottom: 21px;
+            height: inherit;
+            }
+            #pButton {
+              margin: 0;
+            }
+            .course {
+              height: initial;
+              margin: 0;
+              top: 130px;
+              }
+              .meditation .meditation__title {
+                font-size: 36px;
+              }
+              .footer__social {
+                width: 100%;
+                }
+                .footer__social_text {
+                  display: none;
+                }
+              .course__item span {
+              display: block;
+              font-size: 19px;
+              }
+              .footer__copy {
+              width: 100%;
+              font-size: 12px;
+              }
+              .footer__copy__inspire {
+                display: none;
+              }
+              .course__item.course__item--rub {
+              font-size: 110px;
+              margin-bottom: 12px;
+              }
+              .meditation {
+                top: 30px;
+              }
+              .footer__copy__inspire {
+
+              }
+              .video__video-overlay {
+                background: #000;
+              }
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+  .meditation .meditation__title {
+font-size: 28px;
+}
+.course {
+height: initial;
+margin: 0;
+top: 76px;
+}
+#pButton {
+margin: 100px 0 0 0;
+}
+.course__item.course__item--rub {
+font-size: 71px;
+margin-bottom: 12px;
+}
+.meditation {
+top: 9px;
+}
+.course__item.course__item--rub {
+font-size: 65px;
+margin-bottom: 12px;
+}
+.course__item {
+font-size: 31px;
+width: 100%;
+margin-bottom: 35px;
+height: inherit;
+}
+.footer__copy__info {
+  display: none;
+}
+.footer {
+  height: 45px;
+}
+
+    }
+
+@media screen and (device-aspect-ratio: 40/71) {
+  .course {
+height: initial;
+margin: 0;
+top: 84px;
+}
+.course__item {
+  margin-bottom: 20px;
+font-size: 40px;
+}
+
+/*Для высоты */
